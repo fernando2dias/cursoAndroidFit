@@ -2,4 +2,6 @@
     <string name="app_name">Fake News</string>
     <string name="ver_mais">See More</string>
     <string name="descricao_image">Image News</string>
+    <string name="full_source">By %1$s at %2$s</string>
+    <string name="last_updated">Updated at: %1$s</string>
 </resources>
