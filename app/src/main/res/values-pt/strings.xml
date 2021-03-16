@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Fake News</string>
+    <string name="ver_mais">Veja Mais</string>
+    <string name="descricao_image">Imagem da Notícia</string>
+</resources>
