@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+<ScrollView xmlns:app="http://schemas.android.com/apk/res/adroid"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="30dp"
     tools:context=".MainActivity"
-    android:padding="20dp"
     >
 
     <TextView
@@ -16,12 +22,6 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:text="More countries suspend AstraZeneca vaccinations over blood clot fears: What we know so far - CNBC"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginBottom="10dp"
-
         />
 
     <TextView
@@ -31,35 +31,64 @@
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:text="AstraZeneca has said the vaccine has been studied extensively during Phase 3 trials and peer-reviewed data confirms the shot is generally well tolerated."
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.577"
-        android:layout_marginBottom="10dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp"
+        android:textStyle="bold"
         />
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="250dp"
         android:id="@+id/imagem_principal"
         android:src="@drawable/ic_noimage"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="descricao"
 
         />
 
     <TextView
         android:id="@+id/textopadrao"
         android:textSize="14sp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="A health worker holds a box of the AstraZeneneca vaccine at the Bamrasnaradura Infectious Diseases Institute in Nonthaburi province on the outskirts of Bangkok.\r\nLONDON The coronavirus vaccine develo…"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+
         />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/source"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:text="By Author Name in Source Name"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lastUpadate"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="14sp"
+        android:text="Last Updated: hh:MM:ss" />
+
+
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="Ver Mais"/>
 
 </LinearLayout>
+</ScrollView>
