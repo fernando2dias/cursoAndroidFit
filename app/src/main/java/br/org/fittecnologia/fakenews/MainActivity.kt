@@ -1,17 +1,17 @@
 package br.org.fittecnologia.fakenews
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import br.org.fittecnologia.fakenews.databinding.ActivityMainBinding
-
 import com.bumptech.glide.Glide
 
 
 class MainActivity : AppCompatActivity() {
+
+    companion object{
+        const val NEWS_KEY = "NEWS_KEY"
+    }
     private lateinit var binding: ActivityMainBinding
     private lateinit var news: News
 
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        news = savedInstanceState?.getParcelable<News>("NEWS")
+        news = savedInstanceState?.getParcelable<News>(NEWS_KEY)
                 ?: News(
                         "GS Acquisition Holdings Corp II: Rumors Create An Opportunity",
                         "There are rumors swirling around involving BlockFi and Flipkart. The excitement does create opportunity to position in GSAH that was valued at $15 pre-deal just weeks ago.",
@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putParcelable("NEWS", news)
+        outState.putParcelable(NEWS_KEY, news)
         Log.i("LifeCycleTest", "onSaveInstanceState")
     }
 
